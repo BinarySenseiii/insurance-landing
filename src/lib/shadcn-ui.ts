@@ -2,11 +2,9 @@ import animatePlugin from 'tailwindcss-animate'
 import plugin from 'tailwindcss/plugin'
 import {fontFamily} from 'tailwindcss/defaultTheme'
 import type {Config} from 'tailwindcss'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const {default: flattenColorPalette} = require('tailwindcss/lib/util/flattenColorPalette')
 
 const shadcnPlugin = plugin(
-  // 1. add css variables definitions to the base layer
   function ({addBase}) {
     addBase({
       ':root': {
@@ -63,7 +61,6 @@ const shadcnPlugin = plugin(
       })
   },
 
-  // 2. Extend the tailwind theme with utilities
   {
     theme: {
       container: {
@@ -143,7 +140,6 @@ export const shadcnPreset = {
   plugins: [animatePlugin, addVariablesForColors, shadcnPlugin],
 } satisfies Config
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function addVariablesForColors({addBase, theme}: any) {
   const allColors = flattenColorPalette(theme('colors'))
   const newVars = Object.fromEntries(
