@@ -1,4 +1,4 @@
-import {Hero, About, Service, WhyChoosingUs} from './components/sections'
+import {Hero, About, Service, WhyChoosingUs, Quote, Partners, Contact} from './components/sections'
 
 export default function App() {
   return (
@@ -7,6 +7,9 @@ export default function App() {
       <About />
       <Service />
       <WhyChoosingUs />
+      <Quote />
+      <Partners />
+      <Contact />
     </div>
   )
 }
