@@ -1,13 +1,14 @@
 import animatePlugin from 'tailwindcss-animate'
 import plugin from 'tailwindcss/plugin'
-import {fontFamily} from 'tailwindcss/defaultTheme'
 import type {Config} from 'tailwindcss'
 const {default: flattenColorPalette} = require('tailwindcss/lib/util/flattenColorPalette')
+const {fontFamily} = require('tailwindcss/defaultTheme')
 
 const shadcnPlugin = plugin(
   function ({addBase}) {
     addBase({
       ':root': {
+        '--font-sans': 'Ubuntu',
         '--background': '0 0% 100%',
         '--foreground': '224 71.4% 4.1%',
         '--card': '0 0% 100%',
@@ -72,7 +73,7 @@ const shadcnPlugin = plugin(
       },
       extend: {
         fontFamily: {
-          sans: ['var(--font-sans)', ...fontFamily.sans],
+          sans: ['var(--font-sans)', ...fontFamily.sans], // <--------- 👈
         },
         colors: {
           border: 'hsl(var(--border))',
@@ -135,7 +136,7 @@ const shadcnPlugin = plugin(
 
 export const shadcnPreset = {
   prefix: '',
-  darkMode: ['class'],
+  darkMode: 'selector',
   content: [],
   plugins: [animatePlugin, addVariablesForColors, shadcnPlugin],
 } satisfies Config
