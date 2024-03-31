@@ -14,11 +14,11 @@ const Navigation = () => {
   return (
     <nav className="fixed w-full">
       <TopDivider />
-      <div className="h-12 bg-white items-center hidden md:flex fixed w-full">
+      <div className="h-12 bg-white items-center flex fixed w-full">
         <div className="container flex items-center gap-2 justify-between">
-          <a href="#home" className="font-bold">
+          <Link to="home" className="font-bold cursor-pointer">
             CarinsuranceDxb
-          </a>
+          </Link>
 
           <div className="flex items-center gap-3">
             {links.map(link => (
