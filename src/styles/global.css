@@ -5,3 +5,9 @@
 .active-scroll-spy {
   color: hsl(var(--primary));
 }
+
+@layer components {
+  .section-grid {
+    @apply grid grid-cols-1 items-center gap-8  md:grid-cols-2;
+  }
+}

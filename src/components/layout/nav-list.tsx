@@ -9,7 +9,7 @@ const links = [
 
 const NavList = ({isSchedule = false, className}: {isSchedule?: boolean; className?: string}) => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-3">
+    <div className="flex flex-col md:flex-row items-center gap-6">
       {links.map(link => (
         <Link
           activeClass="active-scroll-spy "

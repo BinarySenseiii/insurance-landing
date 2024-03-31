@@ -1,11 +1,12 @@
-import {HeroSection} from './components/sections'
+import {AboutSection, HeroSection} from './components/sections'
 
 export default function App() {
   return (
-    <>
+    <div className="container space-y-16">
       <HeroSection />
-      <section id="about" className="h-screen bg-green-300"></section>
+      <AboutSection />
+
       <section id="services" className="h-screen bg-pink-300"></section>
-    </>
+    </div>
   )
 }

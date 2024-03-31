@@ -4,7 +4,7 @@ import ShuffleGrid from '../shuffle-grid'
 const HeroSection = () => {
   return (
     <section id="home" className="md:pt-[92px] relative">
-      <main className="py-6 md:py-16 container grid grid-cols-1 items-center gap-8  md:grid-cols-2">
+      <main className="py-6 md:py-16 section-grid ">
         <div className="space-y-2 md:space-y-4">
           <p className="text-xs md:text-sm">Simple Pricing, Fair Rates All in one Place</p>
           <h1 className="text-2xl md:text-3xl lg:text-5xl capitalize">
