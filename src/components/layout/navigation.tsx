@@ -12,7 +12,7 @@ const links = [
 
 const Navigation = () => {
   return (
-    <nav className="fixed w-full">
+    <nav className="fixed w-full z-50">
       <TopDivider />
       <div className="h-12 bg-white items-center flex fixed w-full">
         <div className="container flex items-center gap-2 justify-between">
