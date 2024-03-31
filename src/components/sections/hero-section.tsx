@@ -8,12 +8,12 @@ const HeroSection = () => {
       <main className="py-16 container grid grid-cols-1 items-center gap-8  md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-sm">Simple Pricing, Fair Rates All in one Place</p>
-          <h1 className="text-5xl capitalize">Same hundreds on insurance for your car</h1>
+          <h1 className="text-5xl capitalize">Save hundreds on various insurance options</h1>
           <p>
             Welcome to our platform where simplicity meets fairness in pricing. Our goal is to
             provide you with the best rates, all conveniently located in one place. With our
-            services, you can save hundreds on your car insurance. Experience peace of mind knowing
-            that we've got you covered
+            services, you can save hundreds on various insurance options. Experience peace of mind
+            knowing that we've got you covered
           </p>
           <div className="flex items-center gap-2">
             <Link to="quote">
