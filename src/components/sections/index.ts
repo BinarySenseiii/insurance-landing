@@ -1,3 +1,4 @@
-export {default as HeroSection} from './hero-section'
-export {default as AboutSection} from './about-section'
-export {default as ServiceSection} from './service-section'
+export {default as Hero} from './hero'
+export {default as About} from './about'
+export {default as Service} from './service'
+export {default as WhyChoosingUs} from './why-choosing'
