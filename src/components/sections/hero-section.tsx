@@ -1,27 +1,23 @@
-import {Link} from 'react-scroll'
-import {Button} from '../ui/button'
+import HeroActions from '../hero-actions'
 import ShuffleGrid from '../shuffle-grid'
 
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-[92px] relative">
-      <main className="py-16 container grid grid-cols-1 items-center gap-8  md:grid-cols-2">
-        <div className="space-y-4">
-          <p className="text-sm">Simple Pricing, Fair Rates All in one Place</p>
-          <h1 className="text-5xl capitalize">Save hundreds on various insurance options</h1>
-          <p>
+    <section id="home" className="md:pt-[92px] relative">
+      <main className="py-6 md:py-16 container grid grid-cols-1 items-center gap-8  md:grid-cols-2">
+        <div className="space-y-2 md:space-y-4">
+          <p className="text-xs md:text-sm">Simple Pricing, Fair Rates All in one Place</p>
+          <h1 className="text-2xl md:text-3xl lg:text-5xl capitalize">
+            Save hundreds on various insurance options
+          </h1>
+          <p className="text-sm md:text-base">
             Welcome to our platform where simplicity meets fairness in pricing. Our goal is to
             provide you with the best rates, all conveniently located in one place. With our
             services, you can save hundreds on various insurance options. Experience peace of mind
             knowing that we've got you covered
           </p>
-          <div className="flex items-center gap-2">
-            <Link to="quote">
-              <Button>Get a Quote</Button>
-            </Link>
-            <a href="tel:+971555797971">
-              <Button variant="outline">Schedule a Call</Button>
-            </a>
+          <div className="!mt-4 md:mt-0 flex items-center gap-2">
+            <HeroActions isSchedule />
           </div>
         </div>
 
