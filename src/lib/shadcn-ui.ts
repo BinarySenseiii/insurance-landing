@@ -55,6 +55,7 @@ const shadcnPlugin = plugin(
       addBase({
         '*': {
           '@apply border-border': {},
+          'scroll-behavior': 'smooth',
         },
         body: {
           '@apply bg-background text-foreground': {},
@@ -68,7 +69,7 @@ const shadcnPlugin = plugin(
         center: true,
         padding: '1rem',
         screens: {
-          '2xl': '1400px',
+          '2xl': '1250px',
         },
       },
       extend: {
