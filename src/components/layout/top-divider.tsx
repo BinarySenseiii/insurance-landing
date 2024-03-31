@@ -1,4 +1,4 @@
-import {Facebook, Instagram, Mail, Phone} from 'lucide-react'
+import {Facebook, Instagram, Linkedin, Mail, Phone} from 'lucide-react'
 
 const socialMediaLinks = [
   {
@@ -10,6 +10,11 @@ const socialMediaLinks = [
     icon: <Facebook size={17} />,
     link: 'https://www.facebook.com/people/Carinsurancedxbcom/61555612810187/?mibextid=PlNXYD',
     label: 'Facebook',
+  },
+  {
+    icon: <Linkedin size={17} />,
+    link: 'https://www.linkedin.com/in/zareen-javed-8a91a278/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    label: 'Linkedin',
   },
 ]
 
