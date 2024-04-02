@@ -1,10 +1,10 @@
-import {Hero, Service} from './components/sections'
+import {Hero} from './components/sections'
 
 export default function App() {
   return (
     <div className="space-y-16">
       <Hero />
-      <Service />
+      {/* <Service /> */}
       {/* <Quote /> */}
       {/* <Partners /> */}
       {/* <Contact /> */}
