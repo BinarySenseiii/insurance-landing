@@ -1,4 +1,4 @@
-import {Contact, Hero, Partners} from './components/sections'
+import {Hero, Partners} from './components/sections'
 
 export default function App() {
   return (
@@ -7,7 +7,7 @@ export default function App() {
       {/* <Service /> */}
       {/* <Quote /> */}
       <Partners />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   )
 }
