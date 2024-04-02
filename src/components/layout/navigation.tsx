@@ -1,14 +1,16 @@
 import TopDivider from './top-divider'
 
-import {Link} from 'react-scroll'
-import MobileNavigation from './mobile-nav'
-import NavList from './nav-list'
+// import {Link} from 'react-scroll'
+// import MobileNavigation from './mobile-nav'
+// import NavList from './nav-list'
+
+// static md:fixed w-full z-10
 
 const Navigation = () => {
   return (
-    <nav className="static md:fixed w-full z-10">
+    <nav className="w-full">
       <TopDivider />
-      <div className="h-12 bg-white items-center flex w-full">
+      {/* <div className="h-12 bg-white items-center flex w-full">
         <div className="container flex items-center gap-2 justify-between">
           <Link to="home" className="font-bold cursor-pointer">
             CarinsuranceDxb
@@ -20,7 +22,7 @@ const Navigation = () => {
             <NavList />
           </div>
         </div>
-      </div>
+      </div> */}
     </nav>
   )
 }

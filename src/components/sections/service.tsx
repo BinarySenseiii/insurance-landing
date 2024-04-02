@@ -43,11 +43,11 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section id="services" className="py-8 bg-primary rounded-md">
-      <div className="space-y-2 px-2 sm:space-y-3 max-w-2xl mx-auto text-center text-white">
+    <section id="services" className="bg-gray-100 py-8 rounded-md shadow-md">
+      <div className="space-y-2 px-2 sm:space-y-3 max-w-2xl mx-auto text-center text-black container">
         <h3 className="text-sm">SERVICES WE PROVIDE</h3>
         <h2 className="font-bold text-2xl sm:text-4xl">Insurance Solutions</h2>
-        <p className="text-slate-200 text-sm sm:text-base">
+        <p className="text-black text-sm sm:text-base">
           Discover our insurance solutions. From motor to medical, property to pet, we've got you
           covered. Personalized service for peace of mind
         </p>
@@ -74,7 +74,7 @@ const ServiceCard = ({
   return (
     <div
       className={clsx(
-        'bg-white rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-indigo-800',
+        'bg-white rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-black',
       )}
     >
       <div className="text-primary">{service.icon}</div>
