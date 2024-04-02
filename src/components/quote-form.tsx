@@ -5,27 +5,26 @@ import {Input} from './ui/input'
 
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
-import {z} from 'zod'
 
 import {Form, FormControl, FormField, FormItem, FormMessage} from '@/components/ui/form'
+import {quoteSchemaType, QuoteSchema} from '@/schema'
+import {postQuoteData} from '@/api/mutation'
+import {AxiosError} from 'axios'
 
-const phoneRegex = new RegExp(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
-
-const FormSchema = z.object({
-  fullName: z.string().min(1, {message: 'Please enter your full Name'}),
-  phone: z
-    .string()
-    .min(1, {message: 'Please enter your Phone no'})
-    .regex(phoneRegex, 'Invalid Number!'),
-  email: z.string().min(1, {message: 'Please enter an valid email'}).email(),
-  product: z.string().min(1, {message: 'Please select a product'}),
-})
+import {useMutation} from '@tanstack/react-query'
 
 const QuoteForm = () => {
   const {toast} = useToast()
 
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const {mutate, isPending} = useMutation({
+    mutationFn: (newRow: quoteSchemaType) => {
+      return postQuoteData(newRow)
+    },
+  })
+  console.log('isPending::: ', isPending)
+
+  const form = useForm<quoteSchemaType>({
+    resolver: zodResolver(QuoteSchema),
     defaultValues: {
       fullName: '',
       phone: '',
@@ -34,14 +33,24 @@ const QuoteForm = () => {
     },
   })
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: 'You submitted the following values:',
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+  function onSubmit(data: quoteSchemaType) {
+    mutate(data, {
+      onSuccess: data => {
+        if (data instanceof AxiosError) {
+          toast({
+            variant: 'destructive',
+            title: data.name,
+            description: data.message,
+          })
+          return
+        }
+        toast({
+          title: 'Success!',
+          description:
+            'Your query has been submitted successfully. Our team will contact you shortly.',
+        })
+        form.reset()
+      },
     })
   }
 
@@ -61,7 +70,7 @@ const QuoteForm = () => {
               render={({field}) => (
                 <FormItem>
                   <FormControl>
-                    <Input type="text" placeholder="Full Name" {...field} />
+                    <Input type="text" autoComplete="off" placeholder="Full Name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -88,7 +97,7 @@ const QuoteForm = () => {
             render={({field}) => (
               <FormItem>
                 <FormControl>
-                  <Input type="email" placeholder="Email" {...field} />
+                  <Input type="text" placeholder="Email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +109,7 @@ const QuoteForm = () => {
             name="product"
             render={({field}) => (
               <FormItem>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Choose Product" />
@@ -124,7 +133,7 @@ const QuoteForm = () => {
           />
 
           <Button type="submit" className="w-full">
-            Get a Quote
+            {isPending ? 'Please Wait...' : 'Get a Quote'}
           </Button>
         </form>
       </Form>
