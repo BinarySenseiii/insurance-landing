@@ -2,8 +2,9 @@ import {Link} from 'react-scroll'
 
 const links = [
   {id: 1, text: 'Home', target: 'home', offset: -150},
-  {id: 3, text: 'Services', target: 'services', offset: -90},
-  {id: 2, text: 'Partners', target: 'partners', offset: -90},
+  {id: 2, text: 'Services', target: 'services', offset: -90},
+  {id: 3, text: 'Partners', target: 'partners', offset: -90},
+  {id: 4, text: 'Contact Us', target: 'contact', offset: -90},
 ]
 
 const NavList = () => {

@@ -18,7 +18,7 @@ const socialMediaLinks = [
   },
 ]
 
-const info = [
+export const info = [
   {icon: <Phone size={17} />, text: '+971555797971', link: 'tel:+971555797971', label: 'Phone'},
   {
     icon: <Mail size={17} />,
