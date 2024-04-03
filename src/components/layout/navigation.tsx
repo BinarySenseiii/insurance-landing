@@ -1,4 +1,7 @@
+import {Link} from 'react-scroll'
 import TopDivider from './top-divider'
+import MobileNavigation from './mobile-nav'
+import NavList from './nav-list'
 
 // import {Link} from 'react-scroll'
 // import MobileNavigation from './mobile-nav'
@@ -10,7 +13,7 @@ const Navigation = () => {
   return (
     <nav className="w-full">
       <TopDivider />
-      {/* <div className="h-12 bg-white items-center flex w-full">
+      <div className="h-12 bg-white items-center flex w-full">
         <div className="container flex items-center gap-2 justify-between">
           <Link to="home" className="font-bold cursor-pointer">
             CarinsuranceDxb
@@ -22,7 +25,7 @@ const Navigation = () => {
             <NavList />
           </div>
         </div>
-      </div> */}
+      </div>
     </nav>
   )
 }

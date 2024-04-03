@@ -25,7 +25,7 @@ const MobileNavigation = () => {
         </SheetHeader>
 
         <div className="mt-4">
-          <NavList isSchedule className="w-full" />
+          <NavList />
         </div>
       </SheetContent>
     </Sheet>
