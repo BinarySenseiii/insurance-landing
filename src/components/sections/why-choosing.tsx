@@ -22,13 +22,13 @@ const items = [
 
 const WhyChoosingUs = () => {
   return (
-    <section id="about" className="bg-black py-8">
+    <section id="about" className="bg-primary py-8">
       <div className="container">
-        <div className="space-y-5 md:space-y-5 text-white  mx-auto">
-          <h2 className="font-medium text-[22px] md:text-3xl text-center">
+        <div className="space-y-3 md:space-y-5 text-white  mx-auto">
+          <h2 className="font-semibold italic text-[22px] md:text-3xl text-center">
             Why People Choosing Us
           </h2>
-          <p className="text-sm  text-gray-200 md:text-sm text-center max-w-2xl mx-auto">
+          <p className="text-sm md:text-sm text-center max-w-2xl mx-auto">
             Discover why we're the preferred choice for insurance solutions. From our personalized
             service to comprehensive coverage options, find out why customers trust us for their
             insurance needs

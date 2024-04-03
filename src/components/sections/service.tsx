@@ -74,7 +74,7 @@ const ServiceCard = ({
   return (
     <div
       className={clsx(
-        'bg-gray-100 rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-black',
+        'bg-gray-100 rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-primary',
       )}
     >
       <div className="text-primary">{service.icon}</div>
