@@ -4,13 +4,13 @@ import {ReactNode} from 'react'
 
 const services = [
   {
-    title: 'Medical Insurance',
+    title: 'Medical',
     icon: <HeartPulse size={40} />,
     description:
       'Ensure your health and well-being with flexible medical insurance plans designed to cover your medical expenses.',
   },
   {
-    title: 'Boat / Yacht Insurance',
+    title: 'Boat / Yacht',
     icon: <Sailboat size={40} />,
     description:
       'Navigate the waters with confidence knowing your boat or yacht is protected by our specialized insurance solutions.',
@@ -22,7 +22,7 @@ const services = [
       'Safeguard your property investments with reliable insurance coverage against unforeseen events and damages.',
   },
   {
-    title: "Workmen's Compensation Insurance",
+    title: "Workmen's Compensation",
     icon: <PersonStanding size={40} />,
     description:
       "Provide financial security for your employees with our workmen's compensation insurance plans.",
@@ -43,7 +43,7 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section id="services" className="bg-gray-100 py-8 rounded-md shadow-md">
+    <section id="services">
       <div className="space-y-2 px-2 sm:space-y-3 max-w-2xl mx-auto text-center text-black container">
         <h3 className="text-sm">SERVICES WE PROVIDE</h3>
         <h2 className="font-bold text-2xl sm:text-4xl">Insurance Solutions</h2>
@@ -74,12 +74,12 @@ const ServiceCard = ({
   return (
     <div
       className={clsx(
-        'bg-white rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-black',
+        'bg-gray-100 rounded-md p-4 opacity-95 hover:opacity-100 hover:outline hover:outline-black',
       )}
     >
       <div className="text-primary">{service.icon}</div>
       <h3 className="font-semibold text-lg mt-2">{service.title}</h3>
-      <p className="text-gray-600 mt-2">{service.description}</p>
+      <p className="text-gray-600 mt-1 text-sm">{service.description}</p>
     </div>
   )
 }

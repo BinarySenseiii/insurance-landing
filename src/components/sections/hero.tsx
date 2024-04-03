@@ -7,12 +7,11 @@ const HeroSection = () => {
         <div className="space-y-2 md:space-y-4">
           <p className="text-xs md:text-sm">Simple Pricing, Fair Rates All in one Place</p>
           <h1 className="text-2xl md:text-3xl lg:text-5xl capitalize">
-            Insurance Cannot be complicated Anymore
+            We provide the best value insurance
           </h1>
           <p className="text-sm md:text-base">
-            Welcome to our platform - where simplicity meets fairness in pricing. Save hundreds on
-            insurance options, all conveniently located in one place. Experience peace of mind
-            knowing we've got you covered
+            Discover peace of mind with our affordable and reliable insurance options, customized to
+            fit your needs perfectly. Protect your investments with our top-notch coverage today.
           </p>
         </div>
 

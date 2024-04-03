@@ -1,10 +1,11 @@
-import {Hero, Partners} from './components/sections'
+import {Hero, Partners, Service, WhyChoosingUs} from './components/sections'
 
 export default function App() {
   return (
     <div className="space-y-16">
       <Hero />
-      {/* <Service /> */}
+      <Service />
+      <WhyChoosingUs />
       {/* <Quote /> */}
       <Partners />
       {/* <Contact /> */}
