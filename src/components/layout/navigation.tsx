@@ -13,9 +13,9 @@ const Navigation = () => {
   return (
     <nav className="w-full">
       <TopDivider />
-      <div className="h-12 bg-white items-center flex w-full">
+      <div className="h-12 bg-primary items-center flex w-full">
         <div className="container flex items-center gap-2 justify-between">
-          <Link to="home" className="font-bold cursor-pointer">
+          <Link to="home" className="font-bold cursor-pointer text-white">
             CarinsuranceDxb
           </Link>
 

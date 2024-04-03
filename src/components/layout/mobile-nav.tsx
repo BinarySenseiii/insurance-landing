@@ -13,7 +13,7 @@ const MobileNavigation = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Menu className="block md:hidden cursor-pointer" />
+        <Menu className="block md:hidden cursor-pointer text-white" />
       </SheetTrigger>
       <SheetContent side="bottom" className="px-2">
         <SheetHeader>

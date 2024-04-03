@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 .active-scroll-spy {
-  color: hsl(var(--primary));
+  color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+  .active-scroll-spy {
+    color: hsl(var(--primary)) !important;
+  }
 }
 
 @layer components {
