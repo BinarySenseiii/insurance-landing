@@ -24,8 +24,6 @@ const WhyChoosingUs = () => {
   return (
     <section id="about" className="bg-black py-8">
       <div className="container">
-        <img src="/why-choose.jpg" className="w-full rounded-md block sm:hidden" />
-
         <div className="space-y-5 md:space-y-5 text-white  mx-auto">
           <h2 className="font-medium text-[22px] md:text-3xl text-center">
             Why People Choosing Us
@@ -36,7 +34,7 @@ const WhyChoosingUs = () => {
             insurance needs
           </p>
 
-          <div className="grid grid-cols-3 !mt-12  text-center gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 !mt-12  text-center gap-10 sm:gap-2">
             {items.map(item => (
               <div className="flex flex-col gap-2 items-center" key={item.id}>
                 <img src={item.image} alt={item.title} className="mb-2" />
