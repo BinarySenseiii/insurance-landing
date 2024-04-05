@@ -1,13 +1,7 @@
-import {Link} from 'react-scroll'
 import TopDivider from './top-divider'
 import MobileNavigation from './mobile-nav'
 import NavList from './nav-list'
-
-// import {Link} from 'react-scroll'
-// import MobileNavigation from './mobile-nav'
-// import NavList from './nav-list'
-
-// static md:fixed w-full z-10
+import {Link} from 'react-router-dom'
 
 const Navigation = () => {
   return (
@@ -15,7 +9,7 @@ const Navigation = () => {
       <TopDivider />
       <div className="h-12 bg-primary items-center flex w-full">
         <div className="container flex items-center gap-2 justify-between">
-          <Link to="home" className="font-bold cursor-pointer text-white">
+          <Link to="/" className="font-bold cursor-pointer text-white">
             CarinsuranceDxb
           </Link>
 
