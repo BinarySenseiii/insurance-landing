@@ -11,6 +11,8 @@ import {quoteSchemaType, QuoteSchema} from '@/schema'
 import {postQuoteData} from '@/api/mutation'
 import {AxiosError} from 'axios'
 
+import ReactGA from 'react-ga4'
+
 import {useMutation} from '@tanstack/react-query'
 
 const QuoteForm = () => {
@@ -21,7 +23,6 @@ const QuoteForm = () => {
       return postQuoteData(newRow)
     },
   })
-  console.log('isPending::: ', isPending)
 
   const form = useForm<quoteSchemaType>({
     resolver: zodResolver(QuoteSchema),
@@ -34,6 +35,12 @@ const QuoteForm = () => {
   })
 
   function onSubmit(data: quoteSchemaType) {
+    ReactGA.event({
+      category: data.product,
+      action: 'submit',
+      label: 'Quote Submit',
+    })
+
     mutate(data, {
       onSuccess: data => {
         if (data instanceof AxiosError) {
