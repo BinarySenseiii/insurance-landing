@@ -1,17 +1,26 @@
+import {Footer, Navigation} from '@/components/layout'
+import AppProviders from '@/providers'
+import '@/styles/global.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import '@/styles/global.css'
-import AppProviders from '@/providers'
-import {Navigation} from '@/components/layout'
-import Footer from './components/layout/footer.tsx'
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import router from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppProviders>
-      <Navigation />
-      <App />
-      <Footer />
-    </AppProviders>
+    <BrowserRouter>
+      <AppProviders>
+        <Navigation />
+
+        <Routes>
+          {router.map(route => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+
+        <Footer />
+      </AppProviders>
+    </BrowserRouter>
   </React.StrictMode>,
 )
