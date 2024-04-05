@@ -15,7 +15,7 @@ const shadcnPlugin = plugin(
         '--card-foreground': '222.2 84% 4.9%',
         '--popover': '0 0% 100%',
         '--popover-foreground': '222.2 84% 4.9%',
-        '--primary': '221.2 83.2% 53.3%',
+        '--primary': '195, 98%, 20%',
         '--primary-foreground': '210 40% 98%',
         '--secondary': '210 40% 96.1%',
         '--secondary-foreground': '222.2 47.4% 11.2%',
@@ -78,6 +78,8 @@ const shadcnPlugin = plugin(
         },
         colors: {
           border: 'hsl(var(--border))',
+          active: '#e57d55',
+          section: '#f4f9fd',
           input: 'hsl(var(--input))',
           ring: 'hsl(var(--ring))',
           background: 'hsl(var(--background))',

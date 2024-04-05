@@ -55,7 +55,7 @@ const QuoteForm = () => {
   }
 
   return (
-    <div className="h-full bg-white p-2 md:p-4 rounded-md shadow-sm">
+    <div className="h-full bg-white p-2 md:p-4 rounded-md shadow-md">
       <div className="text-center space-y-2">
         <h2 className="font-semibold text-2xl italic">Get a Free Quote Now</h2>
         <p>Take the first step towards securing your best life today. </p>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .active-scroll-spy {
-  color: white !important;
+  color: #e57d55 !important;
 }
 
 @media screen and (max-width: 768px) {

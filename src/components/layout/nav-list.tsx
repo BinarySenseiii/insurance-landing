@@ -19,9 +19,7 @@ const NavList = () => {
           offset={link.offset}
           duration={200}
           key={link.id}
-          className={
-            'md:hover:text-white hover:text-primary font-medium md:text-slate-200 cursor-pointer'
-          }
+          className={'hover:text-active font-medium md:text-slate-200 cursor-pointer'}
         >
           {link.text}
         </Link>

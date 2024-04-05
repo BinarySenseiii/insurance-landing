@@ -2,7 +2,7 @@ import QuoteForm from '../quote-form'
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative bg-gray-100">
+    <section id="home" className="relative bg-section">
       <main className="py-6 md:py-16 text-center sm:text-left section-grid container">
         <div className="space-y-2 md:space-y-4">
           <p className="text-xs md:text-sm">Simple Pricing, Fair Rates</p>
