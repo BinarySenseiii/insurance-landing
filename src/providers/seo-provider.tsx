@@ -3,7 +3,7 @@ import {Helmet, HelmetProvider} from 'react-helmet-async'
 const config = {
   title: `CarInsuranceDXB - Comprehensive Insurance Solutions in Dubai`,
   description:
-    'CarInsuranceDXB: Your Destination for Comprehensive Car Insurance in Dubai. Tailored Coverage Plans, Competitive Rates, and Expert Guidance. Get Your Free Quote Today!',
+    'Your Destination for Comprehensive Car Insurance in Dubai. Tailored Coverage Plans, Competitive Rates, and Expert Guidance. Get Your Free Quote Today!',
 }
 
 const SeoProvider = () => {
@@ -13,7 +13,7 @@ const SeoProvider = () => {
         <title>{config.title}</title>
         <meta content={config.description} name="description" />
         <meta
-          content="Dubai Car Insurance, UAE Car Insurance, Comprehensive Insurance, Car Insurance"
+          content="Dubai Car Insurance, UAE Car Insurance, Comprehensive Insurance, Car Insurance, CarInsuranceDXB, CarInsuranceDXB.com"
           name="keywords"
         />
 
