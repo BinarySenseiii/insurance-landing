@@ -2,20 +2,20 @@ const items = [
   {
     id: 1,
     title: '24/7 Customer Service',
-    image: '/icon-01-primary.png',
+    image: '/images/icon-01-primary.png',
     desc: `Our state-of-the-art call center is always at your service, providing answers and assistance any time of the day`,
   },
   {
     id: 2,
     title: 'Full-Spectrum Support',
-    image: '/icon-02-primary.png',
+    image: '/images/icon-02-primary.png',
     desc: `From policy issuance to claim settlements, we’re with you at every step, ensuring a hassle-free experience.`,
   },
 
   {
     id: 4,
     title: 'Best Prices, Guaranteed',
-    image: '/icon-04-primary.png',
+    image: '/images/icon-04-primary.png',
     desc: `Unlock exclusive discounts and offers across UAE, enriching your lifestyle beyond just motor insurance.`,
   },
 ]

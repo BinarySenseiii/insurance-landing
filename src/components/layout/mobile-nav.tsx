@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/sheet'
 import {Menu} from 'lucide-react'
 import NavList from './nav-list'
+import SocialLinks from '../social-links'
 
 const MobileNavigation = () => {
   return (
@@ -18,14 +19,18 @@ const MobileNavigation = () => {
       <SheetContent side="bottom" className="px-2">
         <SheetHeader>
           <SheetTitle> CarinsuranceDxb</SheetTitle>
-          <SheetDescription>
-            Your Destination for Comprehensive Insurance in Dubai. Tailored Coverage Plans,
-            Competitive Rates, and Expert Guidance
+          <SheetDescription className="italic !mt-1">
+            Your Destination for Comprehensive Insurance in Dubai
           </SheetDescription>
         </SheetHeader>
 
         <div className="mt-4">
           <NavList />
+        </div>
+
+        <hr className="my-3" />
+        <div className="flex items-center justify-center">
+          <SocialLinks />
         </div>
       </SheetContent>
     </Sheet>
