@@ -6,12 +6,10 @@ import {Input} from './ui/input'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useForm} from 'react-hook-form'
 
-import {Form, FormControl, FormField, FormItem, FormMessage} from '@/components/ui/form'
-import {quoteSchemaType, QuoteSchema} from '@/schema'
 import {postQuoteData} from '@/api/mutation'
+import {Form, FormControl, FormField, FormItem, FormMessage} from '@/components/ui/form'
+import {QuoteSchema, quoteSchemaType} from '@/schema'
 import {AxiosError} from 'axios'
-
-import ReactGA from 'react-ga4'
 
 import {useMutation} from '@tanstack/react-query'
 
@@ -35,13 +33,18 @@ const QuoteForm = () => {
   })
 
   function onSubmit(data: quoteSchemaType) {
-    ReactGA.event({
-      category: data.product,
-      action: 'submit',
-      label: 'Quote Submit',
-    })
+    if (!data) return
+    const currentDate = new Date()
 
-    mutate(data, {
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    }).format(currentDate)
+
+    const quoteData = {...data, date: formattedDate}
+
+    mutate(quoteData, {
       onSuccess: data => {
         if (data instanceof AxiosError) {
           toast({
@@ -118,7 +121,7 @@ const QuoteForm = () => {
               <FormItem>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger className="w-full text-[12.5px]">
                       <SelectValue placeholder="Choose Product" />
                     </SelectTrigger>
                   </FormControl>
