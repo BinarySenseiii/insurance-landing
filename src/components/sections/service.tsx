@@ -43,8 +43,8 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section id="services">
-      <div className="space-y-2 px-2 sm:space-y-3 max-w-2xl mx-auto text-center text-black container">
+    <section id="services" className="container">
+      <div className="space-y-2 sm:space-y-3 max-w-2xl mx-auto text-center text-black">
         <h3 className="text-sm">SERVICES WE PROVIDE</h3>
         <h2 className="font-bold text-2xl sm:text-4xl">Insurance Solutions</h2>
         <p className="text-black text-sm sm:text-base">
@@ -53,7 +53,7 @@ const ServiceSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4  mt-8">
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
         ))}

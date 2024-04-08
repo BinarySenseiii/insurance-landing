@@ -10,6 +10,7 @@ import {postQuoteData} from '@/api/mutation'
 import {Form, FormControl, FormField, FormItem, FormMessage} from '@/components/ui/form'
 import {QuoteSchema, quoteSchemaType} from '@/schema'
 import {AxiosError} from 'axios'
+import {format} from 'date-fns'
 
 import {useMutation} from '@tanstack/react-query'
 
@@ -34,15 +35,11 @@ const QuoteForm = () => {
 
   function onSubmit(data: quoteSchemaType) {
     if (!data) return
+
     const currentDate = new Date()
+    const formattedDate = format(currentDate, 'dd/MM/yyyy')
 
-    const formattedDate = new Intl.DateTimeFormat('en-US', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    }).format(currentDate)
-
-    const quoteData = {...data, date: formattedDate}
+    const quoteData = {...data, email: data.email.toLowerCase(), date: formattedDate}
 
     mutate(quoteData, {
       onSuccess: data => {
@@ -65,10 +62,12 @@ const QuoteForm = () => {
   }
 
   return (
-    <div className="h-full bg-white p-2 md:p-4 rounded-md shadow-md">
+    <div className="h-full bg-white p-3 md:p-4 rounded-md shadow-md">
       <div className="text-center space-y-2">
-        <h2 className="font-semibold text-2xl italic">Get a Free Quote Now</h2>
-        <p>Take the first step towards securing your best life today. </p>
+        <h2 className="font-semibold text-xl md:text-2xl italic">Get a Free Quote Now</h2>
+        <p className="text-sm md:text-md">
+          Take the first step towards securing your best life today.{' '}
+        </p>
       </div>
 
       <Form {...form}>
@@ -107,7 +106,12 @@ const QuoteForm = () => {
             render={({field}) => (
               <FormItem>
                 <FormControl>
-                  <Input type="text" placeholder="Email" {...field} />
+                  <Input
+                    type="text"
+                    placeholder="Email"
+                    {...field}
+                    className="lowercase placeholder:capitalize"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

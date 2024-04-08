@@ -7,7 +7,7 @@ const Footer = () => {
         <span className="text-sm">
           © {new Date().getFullYear()} CarinsuranceDxb.com All Rights Reserved.
         </span>
-        <div className="space-x-2 text-sm">
+        <div className="space-x-2 mt-2 text-sm">
           <Link to="/privacy" className="hover:underline hover:text-active">
             Privacy Policy
           </Link>
