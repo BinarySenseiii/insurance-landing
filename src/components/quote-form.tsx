@@ -38,8 +38,14 @@ const QuoteForm = () => {
 
     const currentDate = new Date()
     const formattedDate = format(currentDate, 'dd/MM/yyyy')
+    const formattedTime12Hour = format(currentDate, 'hh:mm a')
 
-    const quoteData = {...data, email: data.email.toLowerCase(), date: formattedDate}
+    const quoteData = {
+      ...data,
+      email: data.email.toLowerCase(),
+      date: formattedDate,
+      time: formattedTime12Hour,
+    }
 
     mutate(quoteData, {
       onSuccess: data => {
