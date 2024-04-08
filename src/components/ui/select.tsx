@@ -109,14 +109,14 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      'relative flex w-full cursor-pointer sans select-none items-center rounded-sm py-1.5 pl-2 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+      'relative flex w-full cursor-pointer  select-none items-center rounded-sm py-1.5 pl-2 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
       className,
     )}
     {...props}
   >
     <span className="absolute inset-0 size-full items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <div className="bg-primary h-full sans text-sm rounded-md text-white flex items-center px-2">
+        <div className="bg-primary h-full  text-sm rounded-md text-white flex items-center px-2">
           {children}
         </div>
       </SelectPrimitive.ItemIndicator>

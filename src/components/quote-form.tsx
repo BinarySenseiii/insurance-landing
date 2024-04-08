@@ -71,7 +71,10 @@ const QuoteForm = () => {
       </div>
 
       <Form {...form}>
-        <form className="mt-4 space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          className="mt-4 px-2 md:px-0 pb-2 md:pb-0 space-y-4"
+          onSubmit={form.handleSubmit(onSubmit)}
+        >
           <div className="grid sm:grid-cols-2 gap-4">
             <FormField
               control={form.control}
