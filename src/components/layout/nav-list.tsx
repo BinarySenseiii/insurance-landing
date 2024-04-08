@@ -10,7 +10,7 @@ const links = [
 
 const NavList = ({setIsOpen}: {setIsOpen: Dispatch<React.SetStateAction<boolean>>}) => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6">
+    <div className="flex gap-0 flex-col md:flex-row md:items-center md:gap-6">
       {links.map(link => (
         <Link
           activeClass="active-scroll-spy "
@@ -20,7 +20,9 @@ const NavList = ({setIsOpen}: {setIsOpen: Dispatch<React.SetStateAction<boolean>
           offset={link.offset}
           duration={200}
           key={link.id}
-          className={'hover:text-active font-medium md:text-slate-200 cursor-pointer'}
+          className={
+            'hover:text-active text-sm md:text-md font-medium md:text-slate-200 p-2 md:p-0 cursor-pointer md:bg-transparent'
+          }
           onClick={() => setIsOpen(false)}
         >
           {link.text}

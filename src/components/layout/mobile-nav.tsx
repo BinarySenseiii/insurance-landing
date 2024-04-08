@@ -23,21 +23,22 @@ const MobileNavigation = ({
       <SheetTrigger asChild>
         <Menu className="block md:hidden cursor-pointer text-white" />
       </SheetTrigger>
-      <SheetContent side="bottom" className="px-2">
-        <SheetHeader>
-          <SheetTitle> CarinsuranceDxb</SheetTitle>
+      <SheetContent side="right" className="px-2">
+        <SheetHeader className="text-left -mt-4">
+          <SheetTitle>CarinsuranceDxb</SheetTitle>
           <SheetDescription className="italic !mt-1">
             Your Destination for Comprehensive Insurance in Dubai
           </SheetDescription>
         </SheetHeader>
 
-        <div className="mt-4">
-          <NavList setIsOpen={setIsOpen} />
-        </div>
+        <div className=" h-full flex flex-col justify-between">
+          <div className="mt-4">
+            <NavList setIsOpen={setIsOpen} />
+          </div>
 
-        <hr className="my-3" />
-        <div className="flex items-center justify-center">
-          <SocialLinks />
+          <div className="flex border-t pt-3 items-center pb-14 justify-center">
+            <SocialLinks />
+          </div>
         </div>
       </SheetContent>
     </Sheet>
