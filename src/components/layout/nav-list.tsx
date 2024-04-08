@@ -1,3 +1,4 @@
+import {Dispatch} from 'react'
 import {Link} from 'react-scroll'
 
 const links = [
@@ -7,7 +8,7 @@ const links = [
   {id: 4, text: 'Contact Us', target: 'contact', offset: -90},
 ]
 
-const NavList = () => {
+const NavList = ({setIsOpen}: {setIsOpen: Dispatch<React.SetStateAction<boolean>>}) => {
   return (
     <div className="flex flex-col md:flex-row items-center gap-6">
       {links.map(link => (
@@ -20,6 +21,7 @@ const NavList = () => {
           duration={200}
           key={link.id}
           className={'hover:text-active font-medium md:text-slate-200 cursor-pointer'}
+          onClick={() => setIsOpen(false)}
         >
           {link.text}
         </Link>
