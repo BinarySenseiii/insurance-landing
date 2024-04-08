@@ -41,10 +41,13 @@ const QuoteForm = () => {
     const formattedTime12Hour = format(currentDate, 'hh:mm a')
 
     const quoteData = {
-      ...data,
-      email: data.email.toLowerCase(),
+      '#': '=IF(ISBLANK(B2), "", ROW()-1)',
       date: formattedDate,
       time: formattedTime12Hour,
+      fullName: data.fullName,
+      phone: data.phone,
+      email: data.email.toLowerCase(),
+      product: data.product,
     }
 
     mutate(quoteData, {
