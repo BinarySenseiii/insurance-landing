@@ -1,4 +1,5 @@
 import {info} from '../layout/top-divider'
+import SocialLinks from '../social-links'
 
 const Contact = () => {
   return (
@@ -28,6 +29,10 @@ const Contact = () => {
               <span className="text-sm block opacity-90">{text}</span>
             </a>
           ))}
+        </div>
+
+        <div className="pt-2 !mt-4 border-t-2">
+          <SocialLinks />
         </div>
       </div>
       <div className="aspect-video relative">
