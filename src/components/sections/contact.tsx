@@ -31,7 +31,7 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="pt-2 !mt-4 border-t-2">
+        <div className="pt-6 !mt-4 border-t-2">
           <SocialLinks />
         </div>
       </div>
